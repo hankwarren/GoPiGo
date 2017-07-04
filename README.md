@@ -18,9 +18,9 @@ To start the servers on boot up.
 sudo crontab -e
 
 add:
-    @reboot sh /home/pi/work/flask/launcher.sh >/home/pi/logs/cronlog 2>&1
-    @reboot sh /home/pi/work/flask/ip-server.sh >/home/pi/logs/cronlog 2>&1
-    @reboot sh /home/pi/work/flask/bt-server.sh >/home/pi/logs/cronlog 2>&1
+    @reboot sh /home/pi/work/GoPiGo/launcher.sh >/home/pi/logs/cronlog 2>&1
+    @reboot sh /home/pi/work/GoPiGo/ip-server.sh >/home/pi/logs/cronlog 2>&1
+    @reboot sh /home/pi/work/GoPiGo/bt-server.sh >/home/pi/logs/cronlog 2>&1
 
 chmod 755 launcher.sh
 chmod 755 ip-server.sh

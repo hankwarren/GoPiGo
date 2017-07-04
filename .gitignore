@@ -4,3 +4,5 @@
 Junk/
 *.zip
 tmp
+gopigo
+netifaces
