@@ -33,7 +33,7 @@ while True:
 
             if data:
                 #print('bt-server.py - data: ' + data + ' ' + str(remote.distance))
-                sent = clientSocket.send(data + str(remote.distance) + ' cm')
+                sent = clientSocket.send(data + ' ' + str(remote.distance) + ' cm')
 
         except bluetooth.btcommon.BluetoothError as e:
             print('connection reset: {0}: {1}'.format(e.errno, e.strerror))
