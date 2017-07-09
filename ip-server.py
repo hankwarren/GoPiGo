@@ -5,16 +5,12 @@ import netifaces as ni
 
 serverAddress = ('', 33333)
 
-print('got a server address')
-
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
 serverSocket.bind(serverAddress)
 
 while True:
-    print('wait for a query')
     data, addr = serverSocket.recvfrom(1024)
-    print('got a query')
 
     if data == 'stop':
         print('Client wants me to stop')
@@ -24,5 +20,4 @@ while True:
         serverSocket.sendto(str(ipAddr), addr)
 
 serverSocket.close()
-print('Server stopped')
 

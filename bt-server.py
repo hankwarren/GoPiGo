@@ -16,7 +16,7 @@ bluetooth.advertise_service(serverSocket,
         service_classes=[bluetooth.SERIAL_PORT_CLASS],
         profiles=[bluetooth.SERIAL_PORT_PROFILE])
 
-os.system('flite -t "Bluetooth started."')
+#os.system('flite -t "Bluetooth started."')
 
 while True:
     clientSocket, address = serverSocket.accept()
