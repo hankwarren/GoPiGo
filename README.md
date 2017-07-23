@@ -83,3 +83,11 @@ And then run the Bluetooth daemon in 'compatibility' mode. To do that:
 
     In the line with 'bluetoothd' add -C after 'bluetoothd'. Reboot.
 
+
+
+----------------------------------------
+
+To start a flask server:
+
+FLASK_APP=hello.py flask run --host=0.0.0.0
+
