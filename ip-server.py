@@ -11,7 +11,7 @@ serverSocket.bind(serverAddress)
 
 while True:
     data, addr = serverSocket.recvfrom(1024)
-
+    print('address: ', addr)
     if data == 'stop':
         print('Client wants me to stop')
         break
