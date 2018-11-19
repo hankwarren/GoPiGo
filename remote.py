@@ -4,6 +4,7 @@ import sys
 import time
 import os
 import netifaces
+import syslog
 
 def init():
     global speed
@@ -29,11 +30,11 @@ def remote(data, address):
     global autopilot
     global distance
 
-    print(data)
+    syslog.syslog(data)
     command = data.split(' ')
     length = len(command)
 
-    print(str(len(command)) + ': ' + command[0])
+    syslog.syslog(str(len(command)) + ': ' + command[0])
 
     if command[0] == 'forward':
         print('going forward')

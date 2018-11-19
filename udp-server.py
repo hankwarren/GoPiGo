@@ -22,7 +22,7 @@ init()
 
 mixer = audio.Mixer('PCM')
 mixer.setvolume(85)
-os.system('flite -t "wifi started."')
+#os.system('flite -t "wifi started."')
 
 running = True
 while running:
