@@ -1,3 +1,13 @@
+8/03/2021
+I changed the robot to be an access point. The name broadcast
+also indicates the subnet. For example SpeedBump5 is at 
+address 192.168.5.1
+
+Also, the the bluetooth name is also similarly encoded.
+And the hostname should match.
+
+==============================================================
+
 Run
 
     udp-server
@@ -90,4 +100,9 @@ And then run the Bluetooth daemon in 'compatibility' mode. To do that:
 To start a flask server:
 
 FLASK_APP=hello.py flask run --host=0.0.0.0
+
+-----------------------------------------
+
+The default webpage (from Dexter Industries) is found at 
+/var/www/novnc/index.php
 
