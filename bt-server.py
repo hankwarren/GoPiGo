@@ -12,7 +12,7 @@ syslog.syslog('Starting bt-server.py')
 serverSocket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 
 #port = bluetooth.get_available_port(bluetooth.RFCOMM)
-port = 0
+port = 1
 serverSocket.bind(("", port))
 serverSocket.listen(1)
 syslog.syslog('advertise_service ==============================')
