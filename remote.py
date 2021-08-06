@@ -93,9 +93,10 @@ def remote(data, address):
         gopigo.stop()
 
     elif command[0] == 'speed':
-        print('speed: ' + command[1])
-        gopigo.set_speed(int(command[1]))
-        speed = int(command[1])
+        if length > 1:
+            print('speed: ' + command[1])
+            speed = int(command[1])
+            gopigo.set_speed(int(command[1]))
 
     elif command[0] == 'incspeed':
         speed = speed + 10
@@ -142,14 +143,16 @@ def remote(data, address):
         gopigo.fwd()
 
     elif command[0] == 'rencoder':
-        print('rencoder: ' + command[1])
-        gopigo.enc_tgt(0, 1, int(command[1]))
-        gopigo.fwd()
+        if length > 1:
+            print('rencoder: ' + command[1])
+            gopigo.enc_tgt(0, 1, int(command[1]))
+            gopigo.fwd()
 
     elif command[0] == 'lencoder':
-        print('lencoder: ' + command[1])
-        gopigo.enc_tgt(1, 0, int(command[1]))
-        gopigo.fwd()
+        if length > 1:
+            print('lencoder: ' + command[1])
+            gopigo.enc_tgt(1, 0, int(command[1]))
+            gopigo.fwd()
 
     elif command[0] == 'distance':
         distance = gopigo.us_dist(15)

@@ -1,7 +1,7 @@
 import bluetooth
 serverMACAddress = 'B8:27:EB:FA:8C:08'
 
-port = 0
+port = 1
 s = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 s.connect((serverMACAddress, port))
 
