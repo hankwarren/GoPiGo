@@ -12,11 +12,11 @@ def forward():
     gopigo.fwd()
 
 @app.route('/backward')
-def forward():
+def backward():
     gopigo.bwd()
 
 @app.route('/left')
-def forward():
+def left():
     gopigo.left()
 
 @app.route('/right')
@@ -24,9 +24,8 @@ def right():
     gopigo.right()
 
 @app.route('/stop')
-def forward():
+def stop():
     gopigo.stop()
-
 
 
 if __name__ == "__main__":
