@@ -1,13 +1,13 @@
-from flask import Flask, Response
-from picamera import PiCamera
+from flask import Flask, render_template, Response
+from camera import Camera
 
 import gopigo
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def hello():
-    return "Hello World!"
+    return render_template('index.html')
 
 @app.route('/forward')
 def forward():
@@ -42,7 +42,7 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen(PiCamera()),
+    return Response(gen(Camera()),
             mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
